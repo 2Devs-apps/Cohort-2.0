@@ -1,0 +1,103 @@
+@font-face {
+    font-family: helvetica_now;
+    src: url('helveticanowtext-black-demo.ttf');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{    
+    color: black;
+    margin-right: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    
+}
+
+#main > h1{
+    font-size: 250px;
+    font-weight: 100;
+    padding-left: 40px;
+    font-family: helvetica_now;
+}
+
+#nav {
+    font-family: helvetica_now;
+    padding: 15px 45px;
+}
+
+#nav a{
+    color: black;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+#btmleft{
+    width: 300px;
+    position: absolute;
+    bottom: 20%;
+    left:4%;
+}
+
+#btmleft  h3 {
+    font-family: helvetica_now;
+    font-size: 30px;
+}
+
+#btmleft  h4 {
+    font-family: helvetica_now;
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+#btmleft p{
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+#btmnav{
+    font-family: helvetica_now;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#btmnav a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+#main > img{
+    height: 350px;
+    position: absolute;
+}
+
+#main #first{
+    height: 230px;
+    top:47%;
+    left:40%;
+}
+
+#main #second{
+    height: 230px;
+    top:60%;
+    left:47%;
+}
+
+#main #third{
+    top:30%;
+    left:57%;
+}

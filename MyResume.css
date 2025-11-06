@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+#heroSection{
+    background-color: #002244;
+    height : 200px;
+    text-align: center;
+    color: white;    
+}
+
+.footer{
+    background-color: #002244;
+    height : 100px;
+    margin-top: 30px;
+    text-align: center;
+    color: white;    
+}
+
+.footerData{
+    padding-top: 20px;
+    font-size: medium;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.heading{
+    padding-top: 40px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#heroPara{
+    padding-top: 15px;
+    font-size: 23px;
+    font-style: italic;
+}
+
+#aboutMe{
+    background-color: white;
+    margin: 25px 130px 0px 130px;
+    padding-bottom: 40px;
+    color: black; 
+    border-radius: 10px;
+    text-align: center;
+}
+
+.subHeading{
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    padding-top: 30px;
+    font-size: 25px;
+    font-style: bold;
+    font-weight: bolder;
+}
+
+#aboutMePara{
+    padding-top: 15px;
+    font-size: 20px;
+
+}
+
+#education{
+    background-color: #B9D9EB;
+    margin: 25px 130px 0px 130px;
+    padding-bottom: 40px;
+    color: black; 
+    border-radius: 10px;
+    text-align: center;    
+    /* box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2); */
+}
+
+.subInfoDiv{
+    margin: 10px 250px 0px 250px;
+    border-radius: 7px;
+    height: 40px;
+    padding: 7px;
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 2rem;
+}
+
+#skills{
+    background-color: lightsalmon;
+    margin: 25px 130px 0px 130px;
+    padding-bottom: 40px;
+    color: black; 
+    border-radius: 10px;
+    text-align: center; 
+    text-transform: uppercase;
+    font-weight: bolder;
+    /* box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2); */
+}
+
+#projects{
+    background-color: #E6E6FA;
+    margin: 25px 130px 0px 130px;
+    padding-bottom: 40px;
+    color: black; 
+    border-radius: 10px;
+    text-align: center;    
+    /* box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2); */
+}
+
+#contact{
+    background-color: #ACE1AF;
+    margin: 25px 130px 0px 130px;
+    padding-bottom: 40px;
+    color: black; 
+    border-radius: 10px;
+    text-align: center;    
+    /* box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2); */
+}
