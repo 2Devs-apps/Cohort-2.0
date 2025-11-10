@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+main section {
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  flex-grow: 1;
+  transition: all 7s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: pointer;
+}
+main section:hover {
+  flex-grow: 2;
+}
+main section:nth-child(1) {
+  background-image: url("./asta.jpg");
+}
+main section:nth-child(2) {
+  background-image: url("./yuno.jpg");
+}
+main section:nth-child(3) {
+  background-image: url("./yami.jpg");
+}
+main section:nth-child(4) {
+  background-image: url("./Noelle.jpg");
+}
+main section:nth-child(5) {
+  background-image: url("./swallowtrail.jpg");
+}/*# sourceMappingURL=style.css.map */
