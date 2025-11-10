@@ -1,106 +1,104 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-html,body{
-    height: 100%;
-    width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 
-#main{
-    height: 100%;
-    width: 100%;    
-    background-color: rgb(168, 219, 238);
-    padding: 20px;   
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(168, 219, 238);
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-#card{
-    height: 300px;
-    width: 250px;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 10px 10px 20px black;
-    position: relative; 
-    overflow: hidden;
+#card {
+  height: 300px;
+  width: 250px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px black;
+  position: relative;
+  overflow: hidden;
 }
 
-#card img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+#card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-
-#followbtn{
-    height: 50%;
-    width: 100%;
-    position: absolute;
-    bottom: -10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    padding: 20px;
-    transition: all ease 0.4s;
-    cursor: pointer;
+#followbtn {
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  bottom: -10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 20px;
+  transition: all ease 0.4s;
+  cursor: pointer;
 }
 
-#followbtn h2{
-    font-size: 25px;
-    font-weight: 900;
-    color: transparent;
+#followbtn h2 {
+  font-size: 25px;
+  font-weight: 900;
+  color: transparent;
 }
 
-#followbtn p{
-    font-size: 14px;
-    font-weight: 500;
-    /* color: #888; */
-    color: transparent;
-    text-align: center;
+#followbtn p {
+  font-size: 14px;
+  font-weight: 500;
+  /* color: #888; */
+  color: transparent;
+  text-align: center;
 }
 
-#followbtn button{
-    border-radius: 50px;
-    padding: 10px 30px;
-    /* background-color: rgb(78, 186, 229); */
-    border: none;
-    color: transparent;
-    background-color: transparent;
-
+#followbtn button {
+  border-radius: 50px;
+  padding: 10px 30px;
+  /* background-color: rgb(78, 186, 229); */
+  border: none;
+  color: transparent;
+  background-color: transparent;
 }
 
-#card:hover #followbtn{
+#card:hover #followbtn {
   bottom: 0;
-  background: linear-gradient(transparent,black);
+  background: linear-gradient(transparent, black);
 }
 
-#card:hover p{
+#card:hover p {
   color: #888;
 }
 
-#card:hover h2{
-    /* color: rgb(78, 186, 229); */
-    color: blanchedalmond
+#card:hover h2 {
+  /* color: rgb(78, 186, 229); */
+  color: blanchedalmond;
 }
 
-#card:hover button{
-    background-color: rgb(78, 186, 229);
-    margin: 10px;
-    color: white;
+#card:hover button {
+  background-color: rgb(78, 186, 229);
+  margin: 10px;
+  color: white;
 }
 
 #card:hover button:hover {
-    background-color: transparent;
-    transform: scale(1.05);
-    cursor: pointer;
-    color: rgb(78, 186, 229);
-    border: 2px solid rgb(78, 186, 229);
-    margin: 10px;
+  background-color: transparent;
+  transform: scale(1.05);
+  cursor: pointer;
+  color: rgb(78, 186, 229);
+  border: 2px solid rgb(78, 186, 229);
+  margin: 10px;
 }
-

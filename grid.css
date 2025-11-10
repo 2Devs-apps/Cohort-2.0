@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 0.5fr 0.5fr;
+    grid-template-areas: "header header header"
+                         "section section section"
+                         "divLeft bottomUp divRight"
+                         "divLeft bottomDown divRight";
+    gap: 10px;
+}
+
+header{
+    grid-area: header;
+    background-color: aqua;
+}
+
+section{
+    grid-area: section;
+    background-color: green
+}
+
+#divLeft{
+    grid-area: divLeft;
+    background-color: Red;
+}
+#bottomUp{
+    grid-area: bottomUp;
+    background-color: yellow;
+}
+#bottomDown{
+    grid-area: bottomDown;
+    background-color: orange;
+}
+#divRight{
+    grid-area: divRight;
+    background-color: grey;
+}
