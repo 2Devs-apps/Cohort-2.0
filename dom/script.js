@@ -3,6 +3,8 @@ let main = document.querySelector("main");
 let btn = document.querySelector("#btn");
 
 btn.addEventListener("click", function () {
+  let div = document.createElement("div");
+
   let c1 = Math.floor(Math.random() * 256);
   let c2 = Math.floor(Math.random() * 256);
   let c3 = Math.floor(Math.random() * 256);
@@ -10,8 +12,6 @@ btn.addEventListener("click", function () {
   let x = Math.random() * 80;
   let y = Math.random() * 80;
   let rotate = Math.random() * 360;
-
-  let div = document.createElement("div");
   div.style.height = "180px";
   div.style.width = "180px";
   div.style.position = "absolute";
