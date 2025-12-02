@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-image: url(./flappyBg.png);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  overflow: hidden;
+}
+
+.board {
+  height: 100%;
+  width: 100%;
+  /* remove the grid specifics you don't need for now and make container positioned */
+  position: relative; /* important: child absolute positions are relative to this */
+  border: 0; /* remove the black border unless you want it */
+  overflow: hidden;
+  display: block;
+}
+
+.birdImg {
+  height: 48px;
+  width: 70px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.pipe,
+.upPipe {
+  position: absolute;
+  will-change: transform, height; /* hint for browser */
+  pointer-events: none;
+}
