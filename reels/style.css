@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "helvetica neue";
+  color: white;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: black;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right bottom, rgb(26, 26, 26), rgb(30, 30, 30), black);
+  padding: 20px;
+}
+
+section {
+  height: 100%;
+  width: 400px;
+  background-color: black;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.all-reels {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.all-reels::-webkit-scrollbar {
+  display: none;
+}
+
+.reel {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.reel video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.reel .bottom {
+  padding: 30px 20px;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.948));
+  bottom: 0;
+}
+
+.bottom .user {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.bottom .user img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bottom .user h4 {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.bottom .user button {
+  padding: 2px 4px;
+  font-weight: 500;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: transparent;
+}
+
+.bottom > h3 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.reel .right {
+  padding: 30px;
+  width: 40px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.reel .right i {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.reel .right .h4 {
+  cursor: pointer;
+}
+
+.reel .right h6 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.reel .right > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reel .right img {
+  height: 30px;
+  width: 30px;
+  border-radius: 20%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.love {
+  color: red;
+}/*# sourceMappingURL=style.css.map */
