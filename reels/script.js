@@ -1,5 +1,6 @@
 const reels = [
   {
+    isMuted: true,
     username: "codewithayush",
     likeCount: 14820,
     isLiked: false,
@@ -12,6 +13,7 @@ const reels = [
       "https://images.unsplash.com/photo-1613915617430-8ab0fd7c6baf?q=80&w=930&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
+    isMuted: true,
     username: "designbysan",
     likeCount: 9820,
     isLiked: true,
@@ -24,6 +26,7 @@ const reels = [
     userprofile: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79",
   },
   {
+    isMuted: true,
     username: "frontend.ninja",
     likeCount: 22150,
     isLiked: false,
@@ -36,6 +39,7 @@ const reels = [
     userprofile: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126",
   },
   {
+    isMuted: true,
     username: "travelwithriya",
     likeCount: 54200,
     isLiked: false,
@@ -48,6 +52,7 @@ const reels = [
     userprofile: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
   },
   {
+    isMuted: true,
     username: "daily.dev.quotes",
     likeCount: 3120,
     isLiked: true,
@@ -60,6 +65,7 @@ const reels = [
     userprofile: "https://images.unsplash.com/photo-1599566150163-29194dcaad36",
   },
   {
+    isMuted: true,
     username: "fitnessbymegha",
     likeCount: 27450,
     isLiked: false,
@@ -72,6 +78,7 @@ const reels = [
     userprofile: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6",
   },
   {
+    isMuted: true,
     username: "streetfoodlover",
     likeCount: 68000,
     isLiked: true,
@@ -84,6 +91,7 @@ const reels = [
     userprofile: "https://images.unsplash.com/photo-1552058544-f2b08422138a",
   },
   {
+    isMuted: true,
     username: "musicbytara",
     likeCount: 14500,
     isLiked: false,
@@ -96,6 +104,7 @@ const reels = [
     userprofile: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe",
   },
   {
+    isMuted: true,
     username: "techreviews101",
     likeCount: 23180,
     isLiked: true,
@@ -108,6 +117,7 @@ const reels = [
     userprofile: "https://images.unsplash.com/photo-1511367461989-f85a21fda167",
   },
   {
+    isMuted: true,
     username: "learnanimations",
     likeCount: 18740,
     isLiked: false,
@@ -115,16 +125,30 @@ const reels = [
     shareCount: 92,
     isFollowed: true,
     caption: "GSAP can literally change your career. Start today.",
-    video: "./videos/video10.mp4",
+    video: "./videos/video1.mp4",
 
     userprofile: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
   },
 ];
 
-let sum = "";
-reels.forEach(function (elem) {
-  sum += `<div class="reel">
-            <video autoplay loop muted src="${elem.video}"></video>
+let allReels = document.querySelector(".all-reels");
+
+function addData() {
+  let sum = "";
+  reels.forEach(function (elem, idx) {
+    sum += `<div class="reel" id=${idx}>
+            <video autoplay id=${idx} loop ${
+      elem.isMuted ? "muted" : ""
+    } src="${elem.video}"></video>   
+    
+            <div class="mute" id=${idx}>
+                 ${
+                   elem.isMuted
+                     ? '<i class="ri-volume-mute-fill"></i>'
+                     : '<i class="ri-volume-up-line"></i>'
+                 }
+
+            </div>         
             <div class="bottom">
               <div class="user">
                 <img
@@ -133,12 +157,14 @@ reels.forEach(function (elem) {
                   srcset=""
                 />
                 <h4>${elem.username}</h4>
-                <button>${elem.isFollowed ? "Unfollow" : "Follow"}</button>
+                <button class='follow' id=${idx}>${
+      elem.isFollowed ? "Unfollow" : "Follow"
+    }</button>
               </div>
               <h3>${elem.caption}</h3>
             </div>
             <div class="right">
-              <div class="likes">
+              <div id=${idx} class="like">
                 <h4 class="like-icon icon">${
                   elem.isLiked
                     ? '<i class="love ri-heart-3-fill"></i>'
@@ -146,7 +172,7 @@ reels.forEach(function (elem) {
                 }</h4>
                 <h6>${elem.likeCount}</h6>
               </div>
-              <div class="comments">
+              <div class="comment">
                 <h4 class="like-icon icon"><i class="ri-chat-1-line"></i></h4>
                 <h6>${elem.commentCount}</h6>
               </div>
@@ -168,7 +194,63 @@ reels.forEach(function (elem) {
               </div>
             </div>
           </div>`;
+  });
+
+  allReels.innerHTML = sum;
+}
+
+addData();
+
+allReels.addEventListener("click", function (dets) {
+  if (dets.target.className === "like") {
+    if (!reels[dets.target.id].isLiked) {
+      reels[dets.target.id].likeCount++;
+      reels[dets.target.id].isLiked = true;
+    } else {
+      reels[dets.target.id].likeCount--;
+      reels[dets.target.id].isLiked = false;
+    }
+    addData();
+  }
+
+  if (dets.target.className == "follow") {
+    if (!reels[dets.target.id].isFollowed) {
+      reels[dets.target.id].isFollowed = true;
+    } else {
+      reels[dets.target.id].isFollowed = false;
+    }
+    addData();
+  }
+
+  if (dets.target.className == "mute") {
+    if (!reels[dets.target.id].isMuted) {
+      reels[dets.target.id].isMuted = true;
+    } else {
+      reels[dets.target.id].isMuted = false;
+    }
+    addData();
+  }
 });
 
-let allReels = document.querySelector(".all-reels");
-allReels.innerHTML = sum;
+let lastMutedId = null;
+
+allReels.addEventListener("scrollend", (dets) => {
+  const reelsList = document.querySelectorAll(".reel");
+  let lastReel = null;
+
+  reelsList.forEach((el) => {
+    //console.log("top =>", el.getBoundingClientRect().bottom);
+    if (el.getBoundingClientRect().top < 0) {
+      lastReel = el;
+    } else if (el.getBoundingClientRect().top > window.innerHeight) {
+      console.log("OUTPUT : ");
+    }
+  });
+
+  if (lastReel) {
+    const reelId = lastReel.id;
+
+    reels[reelId].isMuted = true;
+    addData();
+  }
+});
