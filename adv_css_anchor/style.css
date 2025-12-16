@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    anchor-name: --some-anchor;
+    gap: 10px;
+    
+}
+
+.box{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+}
+
+.box:hover{
+    anchor-name: --some-anchor;
+    transform: scale(1.2) !important;
+    opacity: 1 !important;
+    
+}
+
+/* use of has operator in this case is if any box is being hovered then we are scaleing the rest of the boxes to 0.8 and opacity low */
+body:has(.box:hover) .box{
+    transform: scale(0.8);
+    opacity: 0.3;
+    
+}
+
+
+.redBox{
+    background-color: red;
+    
+}
+
+.blueBox{
+    background-color: blue;
+}
+
+.greenBox{
+    background-color: green;
+}
+
+.anchor{
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: absolute;
+    position-anchor: --some-anchor;
+    top: anchor(top);
+    left: anchor(left);
+    bottom: anchor(bottom);
+    right: anchor(right);
+    transition: all 0.3s linear;
+    mix-blend-mode: difference;
+    pointer-events: none;
+}
+

@@ -2,15 +2,25 @@ const para = document.querySelector("p");
 const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 const text = para.innerHTML;
 
-para.addEventListener("mouseover", () => {
-  setInterval(() => {
-    const str = text
-      .split("")
-      .map((char, index) => {
-        return characters.split("")[Math.floor(Math.random() * 53)];
-      })
-      .join();
+let iteration = 0;
 
-    para.innerHTML = str;
-  }, 30);
+function randomText() {
+  const str = text
+    .split("")
+    .map((char, index) => {
+      if (index < iteration) {
+        return char;
+      }
+      return characters.split("")[Math.floor(Math.random() * 52)];
+    })
+    .join("");
+  para.innerHTML = str;
+
+  iteration += 0.2;
+}
+
+// setInterval(randomText, 30);
+
+para.addEventListener("mouseover", () => {
+  setInterval(randomText, 30);
 });
