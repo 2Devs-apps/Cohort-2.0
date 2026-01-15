@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    background-image: url('././assests/pexels-alexandre-saraiva-carniato-583650-2384661.jpg');
+    background-size: cover;
+}
+
+.window{
+    height: 100%;
+    width: 100%;
+}
+
+
+.taskBar{
+    height: 3rem;
+    width: 100%;
+    background-color: rgb(27, 27, 27);
+    opacity: 0.7;
+    position: fixed;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftBarItem{
+    height: 100%;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+
+h4 {
+    height: 100%;
+    width: 100%;
+    /* padding: 10%; */
+    font-size: 30px;
+    padding-left: 30px;
+    padding-top: 8px;
+}
+
+.centerBarItem{
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgDiv{
+    padding-top: 10px;
+    padding-left:10px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+}
+
+img{
+    height: 30px;
+    width: 30px;
+}
+
+.rightBarItem{
+    padding-right: 15px;
+    padding-top: 5px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    
+}
+
+.mainScreen{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+}
+
+.windowPopup{
+   height: 35rem;
+    width: 35rem;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    bottom: 3.5rem; /* sits above taskbar */
+    border-radius: 10px;
+    display: none;
+    
+}
+
+.sidePopup{
+   height: 25rem;
+    width: 20rem;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    border-radius: 10px;
+    display: none;
+    
+}
+
+.rightDivImg{
+    height: 20px;
+    width: 20px;
+    display: flex;
+}
+
+.leftDiv{    
+    height: 100%;
+}
+
+.rightDiv{
+    height: 100%;
+}
+
+
+.mainDivImg{
+    height: 35px;
+    width: 35px;
+    margin: 10px;
+}
+
+.imgDiv:hover {
+    background-color: rgba(196, 187, 187, 0.153);
+}
+
+.lang{
+    color: white;
+    text-align: center;
+    font-weight: 100;
+}
